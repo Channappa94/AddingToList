@@ -7,14 +7,26 @@
 //
 
 import UIKit
+var str = " "
+class ViewController: UIViewController, UITextFieldDelegate {
 
-class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var textField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-    }
 
+    }
+    
+    
+    
+    @IBAction func buttonTapped(_ sender: Any) {
+        textField.text = str
+        secondTableViewController().insertNewContacts()
+        
+        
+    }
+    
 
 }
 
